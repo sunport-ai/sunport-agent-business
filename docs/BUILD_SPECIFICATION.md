@@ -37,6 +37,12 @@ Agents must:
 - follow their mode-specific response template
 - pass all local tests
 
+### 🔒 Tool Usage Rules
+
+Agents may request tools via `ctx.tools.call(...)`.
+Agents must never implement tools or call external APIs directly.
+All external APIs (e.g. Google, SerpAPI) are implemented centrally in the runtime and stubbed in the local harness.
+
 ## 3. Global Output Quality Rules (All Agents)
 
 ### 3.1 Structure requirements (thorough, not shallow)
