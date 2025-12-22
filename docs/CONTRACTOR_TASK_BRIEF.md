@@ -122,3 +122,11 @@ We review PRs using:
 
 Expected effort: **1–2 weeks**, depending on experience.
 
+## Expansion Plan (v0.1 → v0.2)
+
+For contractors working on extended contracts, see **[4-Week Depth Plan](4_WEEK_DEPTH_PLAN.md)** for phased expansion:
+- Week 1: Foundation & Quality Lock-In
+- Week 2: Scenario Awareness & Business Context Modeling
+- Week 3: Tradeoff Reasoning & Option Comparison
+- Week 4: Memory, Continuity & Strategic Follow-Ups
+

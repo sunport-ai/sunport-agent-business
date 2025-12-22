@@ -251,6 +251,7 @@ pytest -v
 
 - **[Build Specification](docs/BUILD_SPECIFICATION.md)** — Complete authoritative specification (use with Cursor)
 - **[Contractor Task Brief](docs/CONTRACTOR_TASK_BRIEF.md)** — One-page task overview for contractors
+- **[4-Week Depth Plan](docs/4_WEEK_DEPTH_PLAN.md)** — Phased expansion plan (v0.1 → v0.2)
 - **[Milestone Structure](docs/MILESTONE_STRUCTURE.md)** — Upwork/Fiverr milestone breakdown (anti-shallow)
 
 ## Contributing
