@@ -120,13 +120,11 @@ We review PRs using:
 
 ## Timeline
 
-Expected effort: **1–2 weeks**, depending on experience.
+Expected effort: **1–2 weeks** for initial scope, **6-8 weeks** for full project scope.
 
-## Expansion Plan (v0.1 → v0.2)
+## Full Project Scope
 
-For contractors working on extended contracts, see **[4-Week Depth Plan](4_WEEK_DEPTH_PLAN.md)** for phased expansion:
-- Week 1: Foundation & Quality Lock-In
-- Week 2: Scenario Awareness & Business Context Modeling
-- Week 3: Tradeoff Reasoning & Option Comparison
-- Week 4: Memory, Continuity & Strategic Follow-Ups
+For contractors working on extended contracts, see **[Project Scope](PROJECT_SCOPE.md)** for the complete 7-week phased plan:
+- **Phase 1 (Weeks 1-4):** Foundation (Structure, Context Awareness, Trade-offs, Continuity)
+- **Phase 2 (Weeks 5-7):** Advanced Reasoning (Persona-Aware Framing, Adversarial Thinking, Validation Logic)
 

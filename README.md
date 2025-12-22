@@ -250,8 +250,8 @@ pytest -v
 ## Contractor Resources
 
 - **[Build Specification](docs/BUILD_SPECIFICATION.md)** — Complete authoritative specification (use with Cursor)
+- **[Project Scope](docs/PROJECT_SCOPE.md)** — Finalized 7-week project scope with isolation protocol
 - **[Contractor Task Brief](docs/CONTRACTOR_TASK_BRIEF.md)** — One-page task overview for contractors
-- **[4-Week Depth Plan](docs/4_WEEK_DEPTH_PLAN.md)** — Phased expansion plan (v0.1 → v0.2)
 - **[Milestone Structure](docs/MILESTONE_STRUCTURE.md)** — Upwork/Fiverr milestone breakdown (anti-shallow)
 
 ## Contributing
