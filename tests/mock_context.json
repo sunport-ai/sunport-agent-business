@@ -1,0 +1,68 @@
+{
+  "scenarios": [
+    {
+      "id": "bootstrap_early_stage",
+      "description": "A solo founder validating an idea with limited funds.",
+      "business_context": {
+        "company_name": "Acme Indie Labs",
+        "stage": "Idea / Validation",
+        "business_model": "B2C Mobile App",
+        "budget": {
+          "amount": 1500,
+          "currency": "USD",
+          "period": "monthly"
+        },
+        "team_size": 1,
+        "primary_goal": "Validate problem-solution fit before building",
+        "constraints": [
+          "No marketing budget",
+          "Founder is non-technical",
+          "Must launch in 4 weeks"
+        ]
+      }
+    },
+    {
+      "id": "growth_saas_series_a",
+      "description": "A funded B2B company scaling sales.",
+      "business_context": {
+        "company_name": "CloudScale B2B",
+        "stage": "Growth / Series A",
+        "business_model": "B2B SaaS (Enterprise)",
+        "budget": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "monthly"
+        },
+        "team_size": 25,
+        "primary_goal": "Optimize sales funnel and reduce churn",
+        "constraints": [
+          "High customer acquisition cost",
+          "Strict data compliance required (GDPR)",
+          "Reporting to board monthly"
+        ]
+      }
+    },
+    {
+      "id": "distressed_retail_turnaround",
+      "description": "A traditional business trying to survive.",
+      "business_context": {
+        "company_name": "Main St. Goods",
+        "stage": "Mature / Distressed",
+        "business_model": "Physical Retail + Shopify",
+        "budget": {
+          "amount": 5000,
+          "currency": "USD",
+          "period": "one-time project"
+        },
+        "team_size": 5,
+        "primary_goal": "Cut costs and pivot to online sales",
+        "constraints": [
+          "Declining foot traffic",
+          "Inventory stuck in warehouse",
+          "Staff morale is low"
+        ]
+      }
+    }
+  ]
+}
+
