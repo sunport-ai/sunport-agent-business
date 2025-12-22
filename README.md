@@ -247,6 +247,11 @@ orchestrator-harness --mode BUSINESS "Create a GTM plan for a new product"
 pytest -v
 ```
 
+## Contractor Resources
+
+- **[Contractor Task Brief](docs/CONTRACTOR_TASK_BRIEF.md)** — One-page task overview for contractors
+- **[Milestone Structure](docs/MILESTONE_STRUCTURE.md)** — Upwork/Fiverr milestone breakdown (anti-shallow)
+
 ## Contributing
 
 See [CONTRIBUTING.md](https://github.com/sunport-ai/shared_orchestrator/blob/main/CONTRIBUTING.md) for PR review rubric.
