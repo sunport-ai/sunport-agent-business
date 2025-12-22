@@ -249,6 +249,7 @@ pytest -v
 
 ## Contractor Resources
 
+- **[Build Specification](docs/BUILD_SPECIFICATION.md)** — Complete authoritative specification (use with Cursor)
 - **[Contractor Task Brief](docs/CONTRACTOR_TASK_BRIEF.md)** — One-page task overview for contractors
 - **[Milestone Structure](docs/MILESTONE_STRUCTURE.md)** — Upwork/Fiverr milestone breakdown (anti-shallow)
 
