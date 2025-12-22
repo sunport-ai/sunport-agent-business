@@ -1,13 +1,10 @@
-# orchestrator-core/Makefile
-
-.PHONY: help setup test harness-run harness-run-msg new-fixture fmt
+.PHONY: install test run run-msg new-business
 
 PY ?= python
 VENV ?= .venv
 PIP := $(VENV)/bin/pip
 PYBIN := $(VENV)/bin/python
 
-# Defaults (override at runtime)
 MODE ?= BUSINESS
 FIXTURE ?=
 MSG ?= "Hello"
@@ -15,21 +12,7 @@ SEED ?= 42
 TRACE_DIR ?= .sunport/traces
 FILE_MEMORY ?= 1
 
-help:
-	@echo ""
-	@echo "Targets:"
-	@echo "  make setup                         Create venv + install deps"
-	@echo "  make test                          Run pytest"
-	@echo "  make harness-run MODE=... FIXTURE=...   Run harness using a fixture"
-	@echo "  make harness-run-msg MODE=... MSG='...' Run harness with a raw message"
-	@echo "  make new-fixture MODE=... NAME=...      Scaffold a new fixture YAML"
-	@echo ""
-	@echo "Examples:"
-	@echo "  make harness-run MODE=BUSINESS FIXTURE=examples/fixtures/business/pricing_bootstrapped_b2c.yaml"
-	@echo "  make harness-run-msg MODE=BUSINESS MSG='Help me price a B2B API'"
-	@echo ""
-
-setup:
+install:
 	$(PY) -m venv $(VENV)
 	$(PIP) install -U pip
 	$(PIP) install -e ".[dev]"
@@ -37,34 +20,36 @@ setup:
 test:
 	$(PYBIN) -m pytest -q
 
-harness-run:
+run:
 	@if [ -z "$(FIXTURE)" ]; then \
-		echo "ERROR: FIXTURE is required. Example:"; \
-		echo "  make harness-run MODE=BUSINESS FIXTURE=examples/fixtures/business/pricing_bootstrapped_b2c.yaml"; \
+		echo "ERROR: FIXTURE required. Example:"; \
+		echo "  make run FIXTURE=examples/fixtures/business/pricing_bootstrapped_b2c.yaml"; \
 		exit 1; \
 	fi
 	@mkdir -p "$(TRACE_DIR)"
 	$(PYBIN) -m orchestrator_core.harness.cli \
 		--mode "$(MODE)" \
+		--agent "agent.agent:BusinessAgent" \
 		--fixture "$(FIXTURE)" \
 		--seed "$(SEED)" \
 		$(if $(filter 1,$(FILE_MEMORY)),--file-memory,) \
 		--trace-dir "$(TRACE_DIR)"
 
-harness-run-msg:
+run-msg:
 	@mkdir -p "$(TRACE_DIR)"
 	$(PYBIN) -m orchestrator_core.harness.cli \
 		--mode "$(MODE)" \
-		--message $(MSG) \
+		--agent "agent.agent:BusinessAgent" \
 		--seed "$(SEED)" \
 		$(if $(filter 1,$(FILE_MEMORY)),--file-memory,) \
-		--trace-dir "$(TRACE_DIR)"
+		--trace-dir "$(TRACE_DIR)" \
+		$(MSG)
 
-new-fixture:
-	@if [ -z "$(MODE)" ] || [ -z "$(NAME)" ]; then \
-		echo "ERROR: MODE and NAME are required. Example:"; \
-		echo "  make new-fixture MODE=BUSINESS NAME=pricing_b2b_seed"; \
+new-business:
+	@if [ -z "$(name)" ]; then \
+		echo "ERROR: name required. Example:"; \
+		echo "  make new-business name=pricing_strategy_saas"; \
 		exit 1; \
 	fi
-	$(PYBIN) scripts/new_fixture.py --mode "$(MODE)" --name "$(NAME)"
+	@$(PYBIN) scripts/new_fixture.py business $(name)
 
