@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sunport-agent-business"
+version = "0.1.0"
+description = "Sunport AI agent module: BUSINESS"
+requires-python = ">=3.10"
+dependencies = [
+  "sunport-orchestrator-core @ git+https://github.com/sunport-ai/sunport-orchestrator-core.git@v0.1.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
