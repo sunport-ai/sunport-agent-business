@@ -15,3 +15,5 @@ def test_agent_output_is_structured():
     assert resp.final.strip()
     assert _has_any_heading(resp.final), "Expected headings/sections (structured output)"
     assert "next" in resp.final.lower(), "Expected a Next actions / Next questions section"
+
+

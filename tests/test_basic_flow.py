@@ -7,3 +7,5 @@ def test_agent_returns_non_empty_response():
     resp = run_agent_once(agent, mode=agent.mode, user_message="Test message")
     assert resp.final.strip()
     assert resp.mode == "BUSINESS"
+
+

@@ -33,10 +33,12 @@ class Agent:
         ]
 
         ctx.add_event("llm.call", mode=self.mode)
-        reply = ctx.llm.chat([m.model_dump() for m in messages])
+        reply = ctx.llm.chat(messages)  # Pass Message objects directly
         ctx.add_event("llm.result", mode=self.mode, chars=len(reply or ""))
 
         # Trace end
         ctx.add_event("agent.end", mode=self.mode)
 
         return AgentResponse(mode=self.mode, final=reply or "", trace=ctx.trace)
+
+
